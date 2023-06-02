@@ -1,0 +1,10 @@
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+  }
+  
+  .expanded {
+    max-height: 2500px;
+  }
+  
