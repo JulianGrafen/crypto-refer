@@ -4,14 +4,14 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import { bnblogo } from "../assets";
 
 function LivePriceMarqueeBNB() {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       axios
         .get("https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT")
         .then((res) => {
-          let price: number = Number(res.data.price).toFixed(2);
+          let price: number = parseFloat(res.data.price);
           setPrice(price);
         })
         .catch((e) => {

@@ -4,14 +4,14 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import { xrpLogo } from "../assets";
 
 function LivePriceMarqueeXRP() {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       axios
         .get("https://api.binance.com/api/v3/ticker/price?symbol=XRPUSDT")
         .then((res) => {
-          let price: number = Number(res.data.price).toFixed(2);
+          let price: number = parseFloat(res.data.price);
           setPrice(price);
         })
         .catch((e) => {
@@ -19,7 +19,8 @@ function LivePriceMarqueeXRP() {
         });
     }, 5000);
     return () => clearInterval(interval);
-  });
+  }, []);
+
   return (
     <div className="flex items-center mr-12">
       <img

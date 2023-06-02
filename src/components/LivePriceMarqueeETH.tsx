@@ -4,14 +4,14 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import { ethLogo } from "../assets";
 
 function LivePriceMarqueeETH() {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       axios
         .get("https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT")
         .then((res) => {
-          let price: number = Number(res.data.price).toFixed(2);
+          let price: number = parseFloat(res.data.price);
           setPrice(price);
         })
         .catch((e) => {
