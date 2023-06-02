@@ -5,8 +5,9 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <App />
-    <div>Hello World</div>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );
