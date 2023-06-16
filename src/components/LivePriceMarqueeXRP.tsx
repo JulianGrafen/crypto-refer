@@ -22,7 +22,7 @@ function LivePriceMarqueeXRP() {
   }, []);
 
   return (
-    <div className="flex items-center mr-12">
+    <div className="flex items-center mr-10">
       <img
         className="lg:h-[0.99vw] mr-2 mb: h-[5vw]"
         src={xrpLogo}

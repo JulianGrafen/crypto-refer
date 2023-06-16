@@ -1,7 +1,7 @@
 {
   "homepage": "https://juliangrafen.github.io/crypto-refer",
   "name": "crypto-website",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
