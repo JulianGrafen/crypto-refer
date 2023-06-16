@@ -5,6 +5,7 @@ import PriceMarquee from "./components/PriceMarquee";
 import Article from "./components/Article";
 
 import News from "./components/News";
+import React from "react";
 
 const App = () => (
   <div className="relative overflow-x-hidden	">
