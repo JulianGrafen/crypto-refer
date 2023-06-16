@@ -8,7 +8,7 @@ export default defineConfig({
   assetsInclude: ["**/*.mov"],
   build: {
     rollupOptions: {
-      external: ["react-router-dom"],
+      external: ["react", "react-dom", "react-router-dom"],
     },
   },
 });
